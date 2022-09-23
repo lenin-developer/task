@@ -1,10 +1,17 @@
 :root {
-    /* colores */
+    /*## colores */
 
+    --border-color: #dbdbdb;
+    --border-color-focus: #485fc7;
+    --button-primary-color: #3e8ed0;
+    --button-prymary-hover-color:#3488ce;
+    --gray-0: #f8f9fa;
+    --gray-1: #f1f3f5;
+    
+    /*## fuentes */
 
-    /* fuentes */
-
-    /* proporciones */
+    /*## proporciones */
+    --margin-top-1: 0.75rem;
 
 }
 

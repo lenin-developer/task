@@ -1,14 +1,19 @@
 import { string } from 'prop-types'
 import styles from './button.module.css'
 
-export const Button = ({ text }) => {
+export const Button = ({ text, type }) => {
     return (
-        <button type='button' className={styles.button} >{text}</button>
+        <button type={type} className={styles.button} >{text}</button>
     );
 
 
 }
 
 Button.propTypes = {
-    text: string
+    text: string,
+    type: string,
+}
+
+Button.defaultProps = {
+    type: 'button'
 }

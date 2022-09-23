@@ -1,3 +1,16 @@
 .button {
+    padding: 6px;
     display: block;
+    background-color: var(--button-primary-color);
+    color: var(--gray-0);
+    border: 1px solid transparent;
+    border-radius: 6px;
+}
+
+.button:hover {
+    background-color: var(--button-prymary-hover-color);
+}
+
+.button:active {
+    transform: scale(0.98);
 }

@@ -1,0 +1,18 @@
+.aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.aside__from {
+    display: flex;
+    flex-direction: column;
+}
+
+.from__containerInputs {
+    border: 0.1px solid transparent;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+}

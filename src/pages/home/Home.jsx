@@ -1,11 +1,13 @@
-import {TadkAddForm} from './widgets/tadkAddForm/TadkAddForm'
+import { FormTaskAdd } from './widgets/formTaskAdd/FormTaskAdd'
+import { Aside } from './sections'
 import styles from './home.module.css'
 
 export const Home = () => {
     return (
-        <aside className={styles.layout}>
-            <TadkAddForm />
-            
-        </aside>
+        <main className={styles.main}>
+            <Aside>
+                <FormTaskAdd />
+            </Aside>
+        </main>
     );
 }
