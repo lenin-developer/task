@@ -1,18 +1,10 @@
-import styles from './aside.module.css'
-import {element} from 'prop-types'
+import { FormTaskAdd } from '../../widgets';
 
-export const Aside = ({children}) => {
+
+export const Aside = () => {
     return (
-        <aside className={styles}>
-            {children}
+        <aside>
+            <FormTaskAdd/>
         </aside>
     );
-}
-
-Aside.propTypes = {
-    children: element
-}
-
-Aside.defaultProps = {
-    children: <></>
 }
