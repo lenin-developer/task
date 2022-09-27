@@ -1,0 +1,22 @@
+.card {
+    display: flex;
+    margin-bottom: 2.625rem;
+}
+
+.card__task {
+ max-width: 406px;
+}
+
+.task__title {
+    margin: 0;
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    background-color: var(--gray-3);
+}
+
+.card__opctionsTask {
+    display: flex;
+    flex-direction: column;
+}

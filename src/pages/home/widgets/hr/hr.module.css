@@ -1,0 +1,16 @@
+.separatorContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.separatorContainer__hr {
+    height: 95vh;
+    border: none;
+    border-left: 1px solid var(--gray-3);
+    box-shadow: 1px 1px 3px 1px var(--gray-3);
+}
+
+@media screen {
+    
+}

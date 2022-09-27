@@ -7,11 +7,28 @@
     --button-prymary-hover-color:#3488ce;
     --gray-0: #f8f9fa;
     --gray-1: #f1f3f5;
+    --gray-2: #e9ecef;
+    --gray-3: #dee2e6;
+    --gray-4: #ced4da;
+    --gray-5: #adb5bd;
+    --gray-6: #868e96;
+    --gray-7: #495057;
+    --gray-8: #343a40;
+    --gray-9: #212529;
     
     /*## fuentes */
 
     /*## proporciones */
     --margin-top-1: 0.75rem;
+
+    /* ## media */
+    ---xxs: 240px; /* smackwack */
+    --xs: 360px;   /* movil small*/
+    --sm: 480px;   /* movil medio*/
+    --md: 768px;   /* table*/
+    --lg: 1024px;  /* movil horizontal*/
+    --xl: 1440px;  /* laptop*/
+    --xxl: 1920px; /* desktop*/
 
 }
 

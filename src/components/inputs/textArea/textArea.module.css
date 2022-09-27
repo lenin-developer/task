@@ -1,6 +1,4 @@
 .textArea {
-
-    margin-bottom: 0.75rem;
     border: 0.0625rem solid var(--border-color);
     border-radius: 0.375rem;
     padding: 0.75rem;
@@ -8,6 +6,8 @@
     outline: none;
     resize: none;
 }
-.textArea:focus, .textArea:active {
+
+.textArea:focus,
+.textArea:active {
     border-color: var(--border-color-focus)
 }

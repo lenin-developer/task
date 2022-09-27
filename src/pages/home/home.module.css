@@ -1,8 +1,9 @@
 .homeLayout {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 3px 2fr;
     grid-template-rows: 1fr;
     grid-template-areas: 
-    "aside main";
+    "aside hr main";
+    gap: 84px;
 }
