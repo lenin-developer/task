@@ -1,8 +1,9 @@
 import {all} from 'redux-saga/effects'
-import {initTasksSaga} from './task/saga/taskSaga'
+import {initTasksSaga, removeTaskRequiredSaga} from './task/saga'
 
 export function* rootSaga(){
     yield all([
-        initTasksSaga()
+        initTasksSaga(),
+        removeTaskRequiredSaga()
     ])
 }

@@ -8,8 +8,7 @@ export const Main = ({tasks}) => {
         <main className={styles.main} >
             <h1>Number Task: { } </h1>
             <section className={styles.main__sectionTasks} >
-                {tasks.map((task) => (<Task key={task?.id} title={task?.attributes?.title} description={task?.attributes?.description} />) )}
-                
+                {tasks.map((task) => (<Task key={task?.id} task={task} />) )}
             </section>
         </main>
     );
