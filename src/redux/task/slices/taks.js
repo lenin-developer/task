@@ -21,13 +21,17 @@ const initialState = {
 }
 
 
+
+
 export const tasks = createSlice({
     name: 'tasks',
     initialState,
     reducers: {
-        initTasks: (state) => { //! use this action in your components
-            //*run middleware initTasksSaga  
+        initTasks: (state) => { // loading all state //*run middleware initTasksSaga  
             state.loading = true
+        },
+        removeTaskRequired: () => { // remove one task, //* run middleware removeTaskRequiredSaga
+
         },
         loadingTasks: (state, { payload }) => { // loading one task
             state.list = state?.list?.map((task) => {
@@ -48,14 +52,6 @@ export const tasks = createSlice({
                 error: false,
             }))
         },
-        getFetchFailed: (state, { payload }) => { // error get //!deprecated, replace by errorTask
-            state.error = payload;
-            state.loading = false;
-        },
-        errorTask: (state, { payload }) => { // error task
-            state.error = payload;
-            state.loading = false;
-        },
         addTask: (state, { payload }) => { // add one task
             state.list = [
                 ...state.list,
@@ -65,11 +61,12 @@ export const tasks = createSlice({
             state.loading = false
             state.error = null
         },
-        removeTaskRequired: () => {
-
-        },
         removeTaskSucceded: (state, { payload }) => {
             state.list = state.list.filter((task) => task.id !== payload.id)
+        },
+        errorTask: (state, { payload }) => { // error task
+            state.error = payload;
+            state.loading = false;
         },
 
     }
@@ -77,7 +74,7 @@ export const tasks = createSlice({
 
 
 export const { initTasks, loadingTasks, finishLoadingTask, 
-    setTasks, addTask, getFetchFailed, removeTask, 
+    setTasks, addTask, removeTask, 
     removeTaskRequired, removeTaskSucceded,
     errorTask,
 } = tasks.actions

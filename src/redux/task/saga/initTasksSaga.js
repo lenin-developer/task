@@ -1,7 +1,7 @@
 import { call, put, takeLatest } from 'redux-saga/effects'
 import { path } from '../../../constants/paths'
 import { get } from '../../../utils/apis'
-import { getFetchFailed, initTasks, setTasks } from '../slices/taks'
+import { initTasks, setTasks, errorTask } from '../slices/taks'
 
 
 
@@ -10,7 +10,7 @@ function* getTasksRequered() {
         const tasks = yield call(get, path.tasks)
         yield put(setTasks(tasks))
     } catch (e) {
-        yield put(getFetchFailed(e))
+        yield put(errorTask(e))
     }
 }
 
