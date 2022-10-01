@@ -1,10 +1,10 @@
 import styles from './inputText.module.css'
 import { string } from 'prop-types';
 
-export const InputText = ({placeholder}) => {
+export const InputText = ({placeholder, ...res }) => {
 
     return (
-        <input type="text" className={`${styles.inputText}`}  placeholder={placeholder} />
+        <input type="text" className={`${styles.inputText}` }  placeholder={placeholder} {...res} />
     );
 }
 

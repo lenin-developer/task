@@ -20,8 +20,13 @@ const initialState = {
 
 }
 
-
-
+const loadingAtask= (state,  payload ) => { // sets the loading property to true for a task
+    const newListTasks = state?.list?.map((task) => {
+        if (task?.id === payload?.id) return { ...task, loading: true }
+        return task
+    })
+    return newListTasks;
+}
 
 export const tasks = createSlice({
     name: 'tasks',
@@ -30,16 +35,13 @@ export const tasks = createSlice({
         initTasks: (state) => { // loading all state //*run middleware initTasksSaga  
             state.loading = true
         },
-        removeTaskRequired: () => { // remove one task, //* run middleware removeTaskRequiredSaga
-
+        removeTaskRequired: (state, { payload }) => { // remove one task, //* run middleware removeTaskRequiredSaga
+            state.list = loadingAtask(state, payload )
         },
-        loadingTasks: (state, { payload }) => { // loading one task
-            state.list = state?.list?.map((task) => {
-                if (task?.id === payload?.id) return { ...task, loading: true }
-                return task
-            })
+        addTaskRequired: (state)=> { // add one task //* run middleware
+            state.loading = true
         },
-        finishLoadingTask: (state, { payload }) => { // finish loading one task
+        finishLoadingATask: (state, { payload }) => { // finish loading one task
             state.list = state?.list?.map((task) => {
                 if (task?.id === payload?.id) return { ...task, loading: false }
                 return task
@@ -52,9 +54,9 @@ export const tasks = createSlice({
                 error: false,
             }))
         },
-        addTask: (state, { payload }) => { // add one task
+        addTaskSucceeded: (state, { payload }) => { // add one task
             state.list = [
-                ...state.list,
+                ...state?.list,
                 payload?.task
             ]
             // reset
@@ -73,8 +75,8 @@ export const tasks = createSlice({
 })
 
 
-export const { initTasks, loadingTasks, finishLoadingTask, 
-    setTasks, addTask, removeTask, 
+export const { initTasks, finishLoadingATask, 
+    setTasks, addTaskSucceeded, addTaskRequired, removeTask, 
     removeTaskRequired, removeTaskSucceded,
     errorTask,
 } = tasks.actions

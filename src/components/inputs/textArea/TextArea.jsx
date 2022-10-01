@@ -18,6 +18,7 @@ export const TextArea = ({
         disabled={disabled}
         className={`${styles.textArea}`}
         style={stylesInline}
+        {...rest}
         />
      );
 }

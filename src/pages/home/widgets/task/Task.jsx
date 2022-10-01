@@ -7,8 +7,6 @@ import styles from './task.module.css'
 
 export const Task = ({ task }) => {
 
-    console.log("task",task)
-
     const dispatch = useDispatch()
 
     const ClickDelete = () => {
@@ -27,8 +25,8 @@ export const Task = ({ task }) => {
             </div>
 
             <div className={styles.card__opctionsTask}>
-                <Button type='button' text='Edit' onClick={ClickDelete} />
-                <Button type='button' text='Remove' />
+                <Button type='button' text='Edit'  />
+                <Button type='button' text='Remove' onClick={ClickDelete}/>
             </div>
         </div>
     );
