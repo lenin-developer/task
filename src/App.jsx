@@ -1,8 +1,7 @@
-import {Home} from './pages/'
+import { Home } from './pages/'
 import styles from './App.module.css'
 
-function App() {
-
+function App () {
   return (
     <div className={styles.mainContainer}>
       <Home />
@@ -10,4 +9,4 @@ function App() {
   )
 }
 
-export default App;
+export default App

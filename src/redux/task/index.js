@@ -1,2 +1,1 @@
-export * from './saga/initTasksSaga';
-export * from './slices/taks';
+export * from './slices/taks'

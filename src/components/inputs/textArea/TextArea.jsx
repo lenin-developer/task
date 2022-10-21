@@ -1,42 +1,36 @@
-import { bool, string } from 'prop-types';
-import styles from './textArea.module.css';
+import { bool, string } from 'prop-types'
+import styles from './textArea.module.css'
 
 export const TextArea = ({
-    placeholder, value, rows, readonly, disabled, 
-    width, ...rest}) => {
+  placeholder, value, rows, readonly,
+  width,
+  changeDescription,
+  ...rest
+}) => {
+  const stylesInline = {}
+  if (width) stylesInline.width = width
 
-    let stylesInline = {};
-    if(width) stylesInline.width = width;
-   
-    return (
-        <textarea 
-        autoComplete='off' 
-        placeholder={placeholder}
-        value={value}
-        rows={rows}
-        readOnly={readonly}
-        disabled={disabled}
-        className={`${styles.textArea}`}
-        style={stylesInline}
-        {...rest}
-        />
-     );
+  return (
+    <textarea
+      value={value}
+      rows={rows}
+      readOnly={readonly}
+      autoComplete='off'
+      className={`${styles.textArea}`}
+      style={stylesInline}
+      {...rest}
+    />
+  )
 }
 
 TextArea.propTypes = {
-    placeholder: string,
-    value: string,
-    rows:string,
-    width: string,
-    readonly: bool,
-    disabled: bool,
-
+  value: string,
+  rows: string,
+  width: string,
+  readonly: bool
 }
 
 TextArea.defaultProps = {
-    placeholder: 'description...',
-    rows:'6',
-    width:'40',
-    readonly: false,
-    disabled: false,
+  rows: '6',
+  readonly: false
 }

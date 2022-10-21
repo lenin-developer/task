@@ -1,10 +1,9 @@
-import { FormTaskAdd } from '../../widgets';
-
+import { FormTaskAdd } from '../../widgets'
 
 export const Aside = () => {
-    return (
-        <aside>
-            <FormTaskAdd/>
-        </aside>
-    );
+  return (
+    <aside>
+      <FormTaskAdd />
+    </aside>
+  )
 }
